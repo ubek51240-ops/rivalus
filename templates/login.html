@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+<h2>Universitet saytiga kirish</h2>
+<form method="POST">
+    <label>Pasport raqami:</label>
+    <input type="text" name="passport" required>
+    <button type="submit">Kirish</button>
+</form>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+      {% for msg in messages %}
+        <li>{{ msg }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+</body>
+</html>

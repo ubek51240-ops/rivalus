@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+<h2>Talaba Ma’lumotlari</h2>
+<ul>
+{% for key, value in student.items() %}
+    <li><strong>{{ key }}:</strong> {{ value }}</li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('logout') }}">Chiqish</a>
+</body>
+</html>
